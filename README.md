@@ -15,8 +15,8 @@ For example the current savings from Chase - one of the nation's largest deposit
 In Savely, users will be able to :
 * Input their current savings details and see how much they are earning
 * See how much more they can be earning(per month or per year) from other available savings accounts(with links)
-* Interact with the tool and adjust timeframes, amounts and accounts to conform to their situation
-* Shows the national savings account rates and historical data? Is this neccesary
+* Interact with the tool and adjust timeframes, amounts and accounts to cater to their situation
+* Shows the national savings account rates and historical data? 
 * See what their cost of living is in their city, and see what the additional savings could be used on
 
 ## Wireframes
@@ -27,7 +27,7 @@ In Savely, users will be able to :
 ### Not too sure which API calls I should be using
 
 The project will consist of the following technologies:
-* D3.js or 3.js for the data visuals 
+* D3.js or 3.js for the data visuals
 * A data scraper that could pull from online rate comparison sites:
     * Bankrate - https://bankrate.com
     * NerdWallet - https://nerdwallet.com
@@ -45,6 +45,7 @@ The project will consist of the following technologies:
     * The St. Louis Fed - https://fred.stlouisfed.org/categories/22
     * Cost of Living by Expatistan - https://www.expatistan.com/cost-of-living/all-cities
 * OR Numbeo - cost of living API - https://www.numbeo.com/cost-of-living/
+* Chart Structure
 
 
 ## Implementation Timeline
