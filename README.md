@@ -1,8 +1,8 @@
-# Saveify
+# Savely
 
 
 ## Background and Overview
-Saveify is a personal finance tool that gathers publicly available information on historical and current savings rates and provides users with a comparison visualizations that will show them how much they could be saving if they moved their savings into a different account.
+Savely is a personal finance tool that gathers publicly available information on historical and current savings rates and provides users with a comparison visualizations that will show them how much they could be saving if they moved their savings into a different account.
 
 Users would be able to input their current savings amount and interest rate and then API calls would be run to fetch data from the top publicly available interest rates.
 
@@ -48,6 +48,8 @@ The data will be sourced online from all or some of the following sites:
 
 ## Bonus features
 
+
+## Notes
 D3.js - data driven documents
 3.js - animated computer graphics
 - Pull historical interest rate data and current rates
@@ -55,13 +57,6 @@ D3.js - data driven documents
 - Pull amortization calculator
 - Some sort of savings api
 - Increased savings by this much
-
-Data Sources:
-- St Louis Fed Data
-https://fred.stlouisfed.org/series/SAVNRNJ
- National Rate on Non-Jumbo Deposits (less than $100,000): Savings (SAVNRNJ)
-- Bankrate
-- Nerdwallet? 
 
 
 * Project Title
