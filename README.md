@@ -2,18 +2,18 @@
 ### Boost your Savings!
 
 ## Background and Overview
-Savely is a personal finance tool that gathers publicly available information on historical and current savings rates and provides users with a comparison visualizations that will show them how much they could be saving if they moved their savings into a different account.
+Savely is a personal finance tool that gathers publicly available information on historical and current savings rates and provides users with comparison visualizations that will show them how much they could be saving if they move their savings into another accounts
 
-Users would be able to input their current savings amount and interest rate and then API calls would be run to fetch data from the top publicly available interest rates.
+Users would be able to input their current savings amount and interest rate and then API calls would be run to fetch data from the top available interest savings accounts.
 
-The graphs and charts provided will show how much more money per month the user could be making by switching to a higher yield savings account and how much more they could be saving in the long run Ideally cost of living data would be available side by side and would show how much the additional savings could help the user based on their geography.
+The graphs and charts provided will show how much more money the user could be making by switching to a higher yield savings account and how much more they could be saving in the long run. Additionally the cost of living data would be available side by side and would show how much the additional savings could help the user based on their geography.
 
-For example the current savings from Chase - one of the nation's largest depositroeies - is offering a paltry interest rate of 0.01% APY, while an online savings account such as Marcus is offering a starting rate of 2.25% APY. With a starting savings amount of $10,000, that is a yearly difference of nearly $225 in savings. The amounts are magnified with a greater amount at start along with monthly contributions.
+For example the current savings from Chase - one of the nation's largest depositories - is offering a paltry interest rate of 0.01% APY, while an online savings account such as Marcus is offering a starting rate of 2.25% APY. With a starting savings amount of $10,000, that is a yearly difference of nearly $225 in savings. The amounts are magnified with a greater amount at start along with monthly contributions.
 
 ## Functionality & MVP
 
 In Savely, users will be able to :
-* Input their current savings situation and see how much they are earning
+* Input their current savings details and see how much they are earning
 * See how much more they can be earning(per month or per year) from other available savings accounts(with links)
 * Interact with the tool and adjust timeframes, amounts and accounts to conform to their situation
 * Shows the national savings account rates and historical data? Is this neccesary
