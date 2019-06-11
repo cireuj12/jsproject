@@ -21,8 +21,7 @@ In Savely, users will be able to :
 
 ## Wireframes
 
-
-
+<img src="wireframe.png" width="100%" height="150%">
 
 ## Architecture and Technologies
 ### Not too sure which API calls I should be using
@@ -75,24 +74,3 @@ D3.js - data driven documents
 - Pull amortization calculator
 - Some sort of savings api
 - Increased savings by this much
-
-
-* Project Title
-* Background and Overview
-    * Motivation for project
-    * High level overview
-* Functionality and MVP Features
-    * Choose carefully
-    * Be especially detailed
-* Architecture and Technologies
-    * Technology 1
-        * Description
-        * Justification
-    * Technology 2
-        * Description
-        * Justification
-    ...
-Implementation Timeline
-    * Most important category
-    * Daily breakdown
-    * Aim to be done by Friday
