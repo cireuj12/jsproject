@@ -22,7 +22,10 @@ In Savely, users will be able to :
 ## Wireframes
 
 
+
+
 ## Architecture and Technologies
+### Not too sure which API calls I should be using
 
 The project will consist of the following technologies:
 * D3.js or 3.js for the data visuals 
@@ -42,6 +45,7 @@ The project will consist of the following technologies:
     * Additional economic will be sourced online from all or some of the following sites:
     * The St. Louis Fed - https://fred.stlouisfed.org/categories/22
     * Cost of Living by Expatistan - https://www.expatistan.com/cost-of-living/all-cities
+* OR Numbeo - cost of living API - https://www.numbeo.com/cost-of-living/
 
 
 ## Implementation Timeline
