@@ -16,7 +16,7 @@ In COL-lie, users will be able to:
 
 ## Wireframes
 
-<img src="wireframe.png" width="100%" height="150%">
+<img src="wireframe.png" width="80%" height="120%">
 
 ## Architecture and Technologies
 
