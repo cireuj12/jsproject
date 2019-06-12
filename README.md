@@ -1,77 +1,67 @@
-# Savely
-### Boost your Savings!
+# COL-lie
+### Compare Cost of Living Expenses across different cities withithe US
+
 
 ## Background and Overview
-Savely is a personal finance tool that gathers publicly available information on historical and current savings rates and provides users with comparison visualizations that will show them how much they could be saving if they move their savings into another accounts
-
-Users would be able to input their current savings amount and interest rate and then API calls would be run to fetch data from the top available interest savings accounts.
-
-The graphs and charts provided will show how much more money the user could be making by switching to a higher yield savings account and how much more they could be saving in the long run. Additionally the cost of living data would be available side by side and would show how much the additional savings could help the user based on their geography.
-
-For example the current savings from Chase - one of the nation's largest depositories - is offering a paltry interest rate of 0.01% APY, while an online savings account such as Marcus is offering a starting rate of 2.25% APY. With a starting savings amount of $10,000, that is a yearly difference of nearly $225 in savings. The amounts are magnified with a greater amount at start along with monthly contributions.
+COL-lie is an interactive personal finance data visualization that will allow users to compare the various cost of living expenses across different cities cities within the U.S. Users will be able to select a city the interactive map and then compare prices of different items within the city.
 
 ## Functionality & MVP
 
-In Savely, users will be able to :
-* Input their current savings details and see how much they are earning
-* See how much more they can be earning(per month or per year) from other available savings accounts(with links)
-* Interact with the tool and adjust timeframes, amounts and accounts to cater to their situation
-* Shows the national savings account rates and historical data? 
-* See what their cost of living is in their city, and see what the additional savings could be used on
+In COL-lie, users will be able to:
+
+* Select cities on a map
+* The map will be a variation of a "heart chart" based on the living index
+* View how much certain items cost in that city
+
 
 ## Wireframes
 
 <img src="wireframe.png" width="100%" height="150%">
 
 ## Architecture and Technologies
-### Not too sure which API calls I should be using
 
 The project will consist of the following technologies:
-* D3.js or 3.js for the data visuals
-* A data scraper that could pull from online rate comparison sites:
-    * Bankrate - https://bankrate.com
-    * NerdWallet - https://nerdwallet.com
-    * If this is too difficult, we could pull the interest rates directly from the top sites:
-        * Marcus by Goldman Sachs - 2.25%
-        * Citizens Bank - 2.2%
-        * Ally Bank - 2.2%
-        * Wealthfront Savings - 2.51%
-        * Purepoint Financial - 2.35%
-    * And encourage users to *avoid*:
-        * Chase - 0.01%
-        * Bank of America - 0.03%
-        * Citi - 0.06%
-    * Additional economic will be sourced online from all or some of the following sites:
-    * The St. Louis Fed - https://fred.stlouisfed.org/categories/22
-    * Cost of Living by Expatistan - https://www.expatistan.com/cost-of-living/all-cities
-* OR Numbeo - cost of living API - https://www.numbeo.com/cost-of-living/
-* Chart Structure
+* D3.js for the data visuals
+* Parsehub to scrape data
+
+Data source:
+* Numbeo - cost of living API - https://www.numbeo.com/cost-of-living/
+
 
 
 ## Implementation Timeline
 
-### Day 1:
+### Day 1: 
+
+* Finalize project proposal and clean up wireframe
+* Finish brainstorming, looking up data sources and framing the project
 
 ### Day 2:
 
+* Set up the data structure of the json file and make sure relevant data points are present
+* Set up webpack and get it up and running
+* Learn D3 and practice rendering sample data
+* Complete skeleton render page and render cost of living data
+
 ### Day 3:
+
+* Render and style data
 
 ### Day 4: 
 
+* Continue to play with styling and make sure data is flowing through properly
+
 ### Day 5: 
 
-### Over the Weekend
+* Add links to Github and Linkedin
 
+### Over the Weekend
+ 
+ * Finalize styling
+ * Squash bugs
 
 
 ## Bonus features
 
-
-## Notes
-D3.js - data driven documents
-3.js - animated computer graphics
-- Pull historical interest rate data and current rates
-- Pull top interest savings rates
-- Pull amortization calculator
-- Some sort of savings api
-- Increased savings by this much
+* Search for cities in a search bar - city will be highlighted on map
+* Search for items in a search bar - item will be highlighted on sunburst chart
