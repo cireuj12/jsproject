@@ -4,8 +4,8 @@
   "description": "https://mercury.postlight.com/web-parser/ https://wireframe.cc/ https://github.com/d3/d3/wiki/gallery https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API https://github.com/public-apis/public-apis https://docs.google.com/presentation/d/10-R4ZH1ep6YRNJ6fh_r_ZaCBMLXR0rplW-2X4VdEmXk/edit#slide=id.g753e3b803b9ca98a_1",
   "private": true,
   "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "webpack"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -23,6 +23,7 @@
     "webpack-cli": "^3.3.4"
   },
   "dependencies": {
+    "d3-geo": "^1.11.3",
     "lodash": "^4.17.11"
   }
 }
