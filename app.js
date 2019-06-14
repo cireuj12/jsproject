@@ -1,5 +1,5 @@
-var width = 1200;
-var height = 1200;
+var width = 1400;
+var height = 1400;
 
 var projection = d3.geoAlbers()
     .scale(1000)
@@ -24,7 +24,7 @@ d3.json("master.json", function(data) {
     }
 });
 
-
+//this hacky solution does not work - need to map by id... not name
 
 d3.queue()
     .defer(d3.json, "https://d3js.org/us-10m.v2.json")
@@ -55,7 +55,15 @@ function ready (error, us) {
         if (cityarray.includes(d.properties.name)) {
             return "yellow"
         }
-    });    
+    })
+    .on("mouseover",function(d) {
+        if (cityarray.includes(d.properties.name)) {
+        d3.select("h2").text(d.properties.name)};
+    })
+    .on("mouseout"), function(d) {
+        if (cityarray.includes(d.properties.name)) {
+            d3.select("h2").text("")};
+    };    
         // .style("stroke", "white")
         // .style("fill", "grey");//get ratevalue for property matching dataID
             //pass rate value to color function, return color based on domain and range
