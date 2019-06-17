@@ -1,20 +1,25 @@
 
-/* .states {
-    fill:lightblue  ;
+.counties {
     cursor: pointer;
-}  */
+    fill: grey;
+}
 
  /* .states :hover {
      fill:yellow;
 } */
 
+.states {
+    stroke: white;
+    stroke-opacity: 30;
+}
+
 body {
     position: absolute;
     font-family: "Proxima Nova", "Montserrat", sans-serif;
 }
-h2, h3 {
+h2, h3, #meal, #domestic_beer, #rent {
     position: absolute;
-    right: 150px;
+    right: 300px;
     font-size: 1.3em;
     font-weight: 100;
 }
@@ -27,8 +32,20 @@ h3 {
     font-size: 1em;
 }
 
-h1 {
-    top: 10px;
+#meal {
+    top: 100px;
+    font-size: 1em;
 }
+
+#domestic_beer {
+    top: 120px;
+    font-size: 1em;
+}
+
+#rent {
+    top: 140px;
+    font-size: 1em;
+}
+
 
 

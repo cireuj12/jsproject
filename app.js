@@ -1,5 +1,6 @@
-var width = 1000;
-var height = 1000;
+var margin = 40;
+var width = 1500;
+var height = 1000 - 2 * margin;
 
 var projection = d3.geoAlbers()
     .scale(500)
@@ -47,7 +48,7 @@ const countyjson = {'36061' : 'New York',
 '37021' : 'Asheville',
 '36029' : 'Buffalo',
 '13121' : 'Atlanta',
-'04019' : 'Tuscon',
+'04019' : 'Tucson',
 '55079' : 'Milwaukee',
 '48015' : 'Austin',
 '12095' : 'Orlando',
@@ -74,28 +75,25 @@ const cityarray = []
 d3.json("master.json", function(data) {
     let array = data.City
     for (let i = 0; i < array.length; i++) {
-        cityarray.push(array[i].name.split(", ")[0])
+        cityarray.push(array[i].city_name.split(", ")[0])
     }
 });
 //this hacky solution does not work - need to map by id... not name
 
-const fulldataset = (d3.json("master.json", function(data) {
-    return data
-    //any other functions that depend on data
-}));
+
+var master;
+d3.json("countyid.json",function(data) {
+    master =  data
+});
+
 
 d3.queue()
     .defer(d3.json, "https://d3js.org/us-10m.v2.json")
-    .defer(d3.json, "master.json")
+    .defer(d3.json, "countyid.json")
     .await(ready);
 
-function ready (error, us) {
+function ready (error, us, master) {
     if (error) throw error;
-
-    // var rateById = {}; //empty object
-    // unemployment.forEach(function(d) {
-    //     rateById[zeroFill(d.id,d.id.length)] = +d.rate; //create property for each id
-    // });
     
     // svg.append("g").attr("class", "states")
     // .selectAll("path")
@@ -103,6 +101,11 @@ function ready (error, us) {
     // .enter()
     // .append("path")
     // .attr("d", path)
+
+    // if (d.id === master)
+
+    var table  = d3.select("#table").append("table");
+
     svg.append("g").attr("class","counties")
     .selectAll("path")
     .data(topojson.feature(us,us.objects.counties).features) 
@@ -115,9 +118,15 @@ function ready (error, us) {
         }
     })
     .on("mouseover",function(d) {
+        let city_keys = Object.keys(master[d.id])
+        let city_values = Object.values(master[d.id])
+        console.log(city_values)
         if (countyarray.includes(d.id)) {
-        d3.select("h2").text(`County: ${d.properties.name}`);
+        d3.select("h2").text(`County: ${d.properties.name}`)
         d3.select("h3").text(`City: ${countyjson[d.id]}`)
+        d3.select("#meal").text(`Meal for Two: ${master[d.id][(city_keys[1])]}`)
+        d3.select("#domestic_beer").text(`Domestic Beer: ${master[d.id][(city_keys[4])]}`)
+        d3.select("#rent").text(`Rent for 1BR: ${master[d.id][(city_keys[48])]}`)
         };
     })
     .on("mouseout"), function(d) {
@@ -126,12 +135,14 @@ function ready (error, us) {
     };    
 
     svg.append("text")
-        .attr("x", (width / 2))             
-        .attr("y", 0 - (margin.top / 2))
+        .attr("x", 400)             
+        .attr("y", 30)
         .attr("text-anchor", "middle")  
-        .style("font-size", "16px") 
+        .style("font-size", "24px") 
         .style("text-decoration", "underline")  
-        .text("Map of US");
+        .text("Cost of Living in Major US Cities");
+
+    svg.append("g")
 
    /* svg.apppend("g").attr("class", "items")
         .selectAll("path")
@@ -154,13 +165,12 @@ function ready (error, us) {
         // });;
         // .style("stroke", "black");
 
-    // svg.append("path")
-    //     // .datum(topojson.mesh(us, us.o    bjects.states, function(a, b) {
-    //     //     return a.id !== b.id;
-    //     // }))
-    //     .attr("class", "states")
-    //     .attr("d", path(topojson.mesh(us, us.objects.states, function(a, b) {
-    //         return a.id !== b.id;
-    //     })));
+        svg.append("path")
+        .datum(topojson.mesh(us, us.objects.states, function(a, b) {
+            return a.id !== b.id;
+        }))
+        .attr("class", "states")
+        .attr("d", path)
+        .attr("fill", "none");
 }
 
