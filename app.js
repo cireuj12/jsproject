@@ -15,12 +15,6 @@ var svg = d3.select("body").append("svg")
      //creates the svg
 
 //store these arrays elsewhere
-const countyarray = ['36061','02020','06075','15003','36047','25025',
-'11001','53033','42101','06085','17031','06037','37119','06067','41051',
-'12025','36001','27053','24005','08031','42003','37063','06073','37021',
-'36029','13121','04019','55079','48015','12095','12057','39049','32003',
-'28059','47037','32031','29189','04013','48113','18097','48029','48225',
-'21111','55025','47157','49035','05119',]
 
 const countyjson = {'36061' : 'New York',
 '02020' : 'Anchorage',
@@ -92,19 +86,13 @@ d3.queue()
     .defer(d3.json, "countyid.json")
     .await(ready);
 
+var statelistener = ""
+
 function ready (error, us, master) {
     if (error) throw error;
-    
-    // svg.append("g").attr("class", "states")
-    // .selectAll("path")
-    // .data(topojson.feature(us,us.objects.states).features) //bind topojson to data elements
-    // .enter()
-    // .append("path")
-    // .attr("d", path)
-
-    // if (d.id === master)
 
     var table  = d3.select("#table").append("table");
+    var countyarray = Object.keys(countyjson)
 
     svg.append("g").attr("class","counties")
     .selectAll("path")
@@ -118,9 +106,10 @@ function ready (error, us, master) {
         }
     })
     .on("mouseover",function(d) {
+        statelistener = d.id;
+        console.log(statelistener);
         let city_keys = Object.keys(master[d.id])
-        let city_values = Object.values(master[d.id])
-        console.log(city_values)
+        let city_values = Object.values(master[d.id]) // use this and above somehow
         if (countyarray.includes(d.id)) {
         d3.select("h2").text(`County: ${d.properties.name}`)
         d3.select("h3").text(`City: ${countyjson[d.id]}`)
