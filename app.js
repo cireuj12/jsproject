@@ -116,6 +116,9 @@ function ready (error, us, master) {
         d3.select("#meal").text(`Meal for Two: ${master[d.id][(city_keys[1])]}`)
         d3.select("#domestic_beer").text(`Domestic Beer: ${master[d.id][(city_keys[4])]}`)
         d3.select("#rent").text(`Rent for 1BR: ${master[d.id][(city_keys[48])]}`)
+        d3.select("#monthlycommute").text(`Monthly Commute: ${master[d.id][(city_keys[29])]}`)
+        d3.select("#gas").text(`Gallon of Gas: ${master[d.id][(city_keys[33])]}`)
+        
         };
     })
     .on("mouseout"), function(d) {

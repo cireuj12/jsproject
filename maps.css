@@ -17,7 +17,7 @@ body {
     position: absolute;
     font-family: "Proxima Nova", "Montserrat", sans-serif;
 }
-h2, h3, #meal, #domestic_beer, #rent {
+h2, h3, #meal, #domestic_beer, #rent, #monthlycommute, #gas {
     position: absolute;
     right: 300px;
     font-size: 1.3em;
@@ -46,6 +46,18 @@ h3 {
     top: 140px;
     font-size: 1em;
 }
+
+#monthlycommute {
+    top: 160px;
+    font-size: 1em;
+}
+
+#gas {
+    top: 180px;
+    font-size: 1em;
+}
+
+
 
 
 
