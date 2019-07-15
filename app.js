@@ -102,7 +102,7 @@ function ready (error, us, master) {
     .attr("d", path)
     .style("fill", function(d) {
         if (countyarray.includes(d.id)) {
-            return "yellow"
+            return "#F4D03F"
         }
     })
     .on("mouseover",function(d) {
@@ -111,15 +111,19 @@ function ready (error, us, master) {
         let city_keys = Object.keys(master[d.id])
         let city_values = Object.values(master[d.id]) // use this and above somehow
         if (countyarray.includes(d.id)) {
-        d3.select("h2").text(`County: ${d.properties.name}`)
-        d3.select("h3").text(`City: ${countyjson[d.id]}`)
-        d3.select("#meal").text(`Meal for Two: ${master[d.id][(city_keys[1])]}`)
-        d3.select("#domestic_beer").text(`Domestic Beer: ${master[d.id][(city_keys[4])]}`)
-        d3.select("#rent").text(`Rent for 1BR: ${master[d.id][(city_keys[48])]}`)
-        d3.select("#monthlycommute").text(`Monthly Commute: ${master[d.id][(city_keys[29])]}`)
-        d3.select("#gas").text(`Gallon of Gas: ${master[d.id][(city_keys[33])]}`)
-        
-        };
+            d3.select("h2").text(`County: ${d.properties.name}`)
+            d3.select("h3").text(`City: ${countyjson[d.id]}`)
+            d3.select("#meal").text(`Meal for Two: ${master[d.id][(city_keys[1])]}`)
+            d3.select("#domestic_beer").text(`Domestic Beer: ${master[d.id][(city_keys[4])]}`)
+            d3.select("#rent").text(`Rent for 1BR: ${master[d.id][(city_keys[48])]}`)
+            d3.select("#monthlycommute").text(`Monthly Commute: ${master[d.id][(city_keys[29])]}`)
+            d3.select("#gas").text(`Gallon of Gas: ${master[d.id][(city_keys[33])]}`)
+            d3.select("#milk").text(`Gallon of Milk: ${master[d.id][(city_keys[9])]}`)
+            d3.select("#eggs").text(`A Dozen Eggs: ${master[d.id][(city_keys[12])]}`)
+            d3.select("#monthly-utilities").text(`Monthly Utilities: ${master[d.id][(city_keys[36])]}`)
+            d3.select("#fitness-club").text(`Fitness Club: ${master[d.id][(city_keys[39])]}`)
+            d3.select("#mortgage-rate").text(`Mortgage Rate: ${master[d.id][(city_keys[55])]}%`)
+            };
     })
     .on("mouseout"), function(d) {
             d3.select("h2").text("");

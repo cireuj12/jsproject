@@ -1,7 +1,7 @@
 
 .counties {
     cursor: pointer;
-    fill: grey;
+    fill: #7FB3D5;
 }
 
  /* .states :hover {
@@ -17,11 +17,12 @@ body {
     position: absolute;
     font-family: "Proxima Nova", "Montserrat", sans-serif;
 }
-h2, h3, #meal, #domestic_beer, #rent, #monthlycommute, #gas {
+h2, h3, #meal, #domestic_beer, #rent, #monthlycommute, #gas, #milk, #eggs, #monthly-utilities, #fitness-club, #mortgage-rate {
     position: absolute;
     right: 300px;
     font-size: 1.3em;
     font-weight: 100;
+    font-family: 'Varela Round', sans-serif;
 }
 h2 {
     top: 30px;
@@ -57,7 +58,30 @@ h3 {
     font-size: 1em;
 }
 
+#milk {
+    top: 200px;
+    font-size: 1em;
+}
 
+#eggs {
+    top: 220px;
+    font-size: 1em;
+}
+
+#monthly-utilities {
+    top: 240px;
+    font-size: 1em;
+}
+
+#fitness-club {
+    top: 260px;
+    font-size: 1em;
+}
+
+#mortgage-rate {
+    top: 280px;
+    font-size: 1em;
+}
 
 
 
