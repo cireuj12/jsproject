@@ -127,11 +127,12 @@ function ready (error, us, master) {
     };    
 
     svg.append("text")
-        .attr("x", 400)             
+        .attr("x", 500)             
         .attr("y", 30)
         .attr("text-anchor", "middle")  
-        .style("font-size", "24px") 
-        .style("text-decoration", "underline")  
+        .style("font-size", "24px")
+        .style("font-family", "Varela Round")
+        // .style("text-decoration", "underline")  
         .text("Cost of Living in Major US Cities");
 
     svg.append("g")
