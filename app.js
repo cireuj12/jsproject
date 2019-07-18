@@ -121,7 +121,7 @@ function ready (error, us, master) {
             d3.select("#milk").text(`Gallon of Milk: ${master[d.id][(city_keys[9])]}`)
             d3.select("#eggs").text(`A Dozen Eggs: ${master[d.id][(city_keys[12])]}`)
             d3.select("#monthly-utilities").text(`Monthly Utilities: ${master[d.id][(city_keys[36])]}`)
-            d3.select("#fitness-club").text(`Fitness Club: ${master[d.id][(city_keys[39])]}`)
+            d3.select("#fitness-club").text(`Gym Membership: ${master[d.id][(city_keys[39])]}`)
             d3.select("#mortgage-rate").text(`Mortgage Rate: ${master[d.id][(city_keys[55])]}%`)
             };
     })
@@ -137,7 +137,7 @@ function ready (error, us, master) {
         .style("font-size", "24px")
         .style("font-family", "Varela Round")
         // .style("text-decoration", "underline")  
-        .text("Cost of Living in Major US Cities");
+        .text("COL-lie");
 
     svg.append("g")
 
