@@ -107,22 +107,26 @@ function ready (error, us, master) {
     })
     .on("mouseover",function(d) {
         statelistener = d.id;
-        console.log(statelistener);
+        // console.log(statelistener);
+        //on search 
+        //filter 
         let city_keys = Object.keys(master[d.id])
         let city_values = Object.values(master[d.id]) // use this and above somehow
         if (countyarray.includes(d.id)) {
-            d3.select("h2").text(`County: ${d.properties.name}`)
-            d3.select("h3").text(`City: ${countyjson[d.id]}`)
-            d3.select("#meal").text(`Meal for Two: ${master[d.id][(city_keys[1])]}`)
-            d3.select("#domestic_beer").text(`Domestic Beer: ${master[d.id][(city_keys[4])]}`)
-            d3.select("#rent").text(`Rent for 1BR: ${master[d.id][(city_keys[48])]}`)
-            d3.select("#monthlycommute").text(`Monthly Commute: ${master[d.id][(city_keys[29])]}`)
-            d3.select("#gas").text(`Gallon of Gas: ${master[d.id][(city_keys[33])]}`)
-            d3.select("#milk").text(`Gallon of Milk: ${master[d.id][(city_keys[9])]}`)
-            d3.select("#eggs").text(`A Dozen Eggs: ${master[d.id][(city_keys[12])]}`)
-            d3.select("#monthly-utilities").text(`Monthly Utilities: ${master[d.id][(city_keys[36])]}`)
-            d3.select("#fitness-club").text(`Gym Membership: ${master[d.id][(city_keys[39])]}`)
-            d3.select("#mortgage-rate").text(`Mortgage Rate: ${master[d.id][(city_keys[55])]}%`)
+            d3.select("#county").text(`County:  ${d.properties.name}`)
+            d3.select("#city").text(`City:  ${countyjson[d.id]}`)
+            d3.select("#meal").text(`Meal for Two:  ${master[d.id][(city_keys[1])]}`)
+            d3.select("#domestic_beer").text(`Domestic Beer:  ${master[d.id][(city_keys[4])]}`)
+            d3.select("#monthlycommute").text(`Monthly Commute:  ${master[d.id][(city_keys[29])]}`)
+            d3.select("#gas").text(`Gallon of Gas:  ${master[d.id][(city_keys[33])]}`)
+            d3.select("#milk").text(`Gallon of Milk:  ${master[d.id][(city_keys[9])]}`)
+            d3.select("#eggs").text(`A Dozen Eggs:  ${master[d.id][(city_keys[12])]}`)
+            d3.select("#movieticket").text(`Movie:  ${master[d.id][(city_keys[41])]}`)
+            d3.select("#fitness-club").text(`Gym Membership:  ${master[d.id][(city_keys[39])]}`)
+            d3.select("#monthly-utilities").text(`Monthly Utilities:  ${master[d.id][(city_keys[36])]}`)
+            d3.select("#rent").text(`Rent for 1BR(City Center):  ${master[d.id][(city_keys[48])]}`)
+            d3.select("#rent2").text(`Rent for 1BR:  ${master[d.id][(city_keys[49])]}`)
+            d3.select("#mortgage-rate").text(`Mortgage Rate:  ${master[d.id][(city_keys[55])]}%`)
             };
     })
     .on("mouseout"), function(d) {
@@ -134,7 +138,7 @@ function ready (error, us, master) {
         .attr("x", 500)             
         .attr("y", 30)
         .attr("text-anchor", "middle")  
-        .style("font-size", "24px")
+        .style("font-size", "36px")
         .style("font-family", "Varela Round")
         // .style("text-decoration", "underline")  
         .text("COL-lie");

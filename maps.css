@@ -4,6 +4,10 @@
     fill: #7FB3D5;
 }
 
+/* .counties:hover {
+    fill: red;
+} */
+
  /* .states :hover {
      fill:yellow;
 } */
@@ -17,77 +21,99 @@ body {
     position: absolute;
     font-family: "Proxima Nova", "Montserrat", sans-serif;
 }
-h2, h3, #meal, #domestic_beer, #rent, #monthlycommute, #gas, #milk, #eggs, #monthly-utilities, #fitness-club, #mortgage-rate, #header{
+
+#city-county {
     position: absolute;
-    right: 300px;
-    font-size: 1.3em;
+    right: 390px;
+    font-size: 1.1em;
+    font-weight: 100;
+    font-family: 'Varela Round', sans-serif; 
+    top: 50px;
+}
+
+#header {
+    color: lightgray;
+    position: absolute;
+    right: 250px;
+    font-size: 1em;
+    font-weight: 100;
+    font-family: 'Varela Round', sans-serif; 
+}
+
+#meal, #domestic_beer, #rent, #rent2, #monthlycommute, #gas, #milk, #eggs, #monthly-utilities, #fitness-club, #mortgage-rate, #movieticket{
+    /* position: absolute; */
+    /* right: 275px; */
+    font-size: 1em;
     font-weight: 100;
     font-family: 'Varela Round', sans-serif;
 }
 
 #header {
-    top: 40px;
-    font-size: 1em;
+    top: 30px;
 }
 
-h2 {
+/* h2 {
     top: 50px;
-    font-size: 1em;
 }
 h3 {
     top: 70px;
-    font-size: 1em;
+} */
+
+
+#data {
+    right: 270px;
+    position: absolute;
+    top: 120px;
+    /* align-items: flex-start */
 }
 
-#meal {
+/* #meal {
     top: 120px;
-    font-size: 1em;
 }
 
 #domestic_beer {
     top: 140px;
-    font-size: 1em;
-}
-
-#rent {
-    top: 160px;
-    font-size: 1em;
 }
 
 #monthlycommute {
+    top: 160px;
+}
+
+#gas { 
     top: 180px;
-    font-size: 1em;
 }
 
-#gas {
+#milk { 
     top: 200px;
-    font-size: 1em;
 }
 
-#milk {
+#eggs { 
     top: 220px;
-    font-size: 1em;
 }
 
-#eggs {
-    top: 240px;
-    font-size: 1em;
+#movieticket {
+    top: 240px
 }
 
 #monthly-utilities {
     top: 260px;
-    font-size: 1em;
 }
 
 #fitness-club {
     top: 280px;
-    font-size: 1em;
+}
+
+#rent {
+    top: 300px;
+}
+
+#rent2 {
+    top: 320px;
 }
 
 #mortgage-rate {
-    top: 300px;
-    font-size: 1em;
-}
+    top: 340px;
+} */
 
 
 
