@@ -1,3 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url("fontawesome-all.min.css");
+/* 
+body{
+  background: #f2f2f2;
+  font-family: 'Open Sans', sans-serif;
+} */
+
+.search {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  border: 3px solid #00B4CC;
+  border-right: none;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: #00B4CC;
+}
+
+.searchButton {
+  width: 40px;
+  height: 36px;
+  border: 1px solid #00B4CC;
+  background: #00B4CC;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 30%;
+  position: absolute;
+  top: 15px;
+  right: 99px;
+  padding-bottom: 10px;
+  /* transform: translate(-50%, -50%); */
+}
+
 
 .counties {
     cursor: pointer;
@@ -24,21 +75,23 @@ body {
 
 #city-county {
     position: absolute;
-    right: 390px;
+    right: -250px;
     font-size: 1.1em;
     font-weight: 100;
     font-family: 'Varela Round', sans-serif; 
     top: 50px;
+    width: 800px;
 }
 
-#header {
+/* #header {
     color: lightgray;
     position: absolute;
-    right: 250px;
+    right: 175px;
     font-size: 1em;
     font-weight: 100;
     font-family: 'Varela Round', sans-serif; 
-}
+    top: 30px;
+} */
 
 #meal, #domestic_beer, #rent, #rent2, #monthlycommute, #gas, #milk, #eggs, #monthly-utilities, #fitness-club, #mortgage-rate, #movieticket{
     /* position: absolute; */
@@ -46,10 +99,6 @@ body {
     font-size: 1em;
     font-weight: 100;
     font-family: 'Varela Round', sans-serif;
-}
-
-#header {
-    top: 30px;
 }
 
 /* h2 {
@@ -61,9 +110,10 @@ h3 {
 
 
 #data {
-    right: 270px;
+    right: -250px;
     position: absolute;
     top: 120px;
+    width: 800px;
     /* align-items: flex-start */
 }
 

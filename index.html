@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>D3</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="maps.css">
             <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -20,8 +21,19 @@
 <body>
         <script src="app.js"></script>
         <h1></h1>
-                <div id="header">*Hover over a county to see living costs</div>
+               
+                <!-- <div id="header">*Hover over or search for a county to see living costs</div> -->
+                <div class="wrap">
+                                <div class="search">
+                                        <input onsubmit="search()" type="text" id="searchCity" class="searchTerm" placeholder="Hover over or search for a city to see living costs">
+                                        <button type="submit" id="searchButton" class="searchButton">
+                                        <i class="fa fa-search"></i>
+                                        </button>
+                                        </input>
+                                </div>
+                        </div>
                 <div id="city-county">
+
                         <div id="county"></div>
                         <div id="city"></div>
                  </div>

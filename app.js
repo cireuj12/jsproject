@@ -1,3 +1,7 @@
+function search() {
+    alert("This doesn't work yet! ^^; ")
+}
+
 var margin = 40;
 var width = 1500;
 var height = 1000 - 2 * margin;
@@ -94,6 +98,18 @@ function ready (error, us, master) {
     var table  = d3.select("#table").append("table");
     var countyarray = Object.keys(countyjson)
 
+    // document.getElementById("searchCity").onsubmit = function() {
+    //     console.log("hello")
+    //     // alert(document.getElementById("searchCity").value);
+    // }
+
+    // document.getElementbyId("searchCity").onsubmit = function() {searchFunction()};
+
+    // function searchFunction() {
+    //     var x = document.getElementById("searchCity");
+    //     return x.value;
+    // }
+
     svg.append("g").attr("class","counties")
     .selectAll("path")
     .data(topojson.feature(us,us.objects.counties).features) 
@@ -112,7 +128,7 @@ function ready (error, us, master) {
         //filter 
         let city_keys = Object.keys(master[d.id])
         let city_values = Object.values(master[d.id]) // use this and above somehow
-        if (countyarray.includes(d.id)) {
+        if (countyarray.includes(d.id) || countyarray.includes(d.id) ) {
             d3.select("#county").text(`County:  ${d.properties.name}`)
             d3.select("#city").text(`City:  ${countyjson[d.id]}`)
             d3.select("#meal").text(`Meal for Two:  ${master[d.id][(city_keys[1])]}`)
@@ -130,7 +146,7 @@ function ready (error, us, master) {
             };
     })
     .on("mouseout"), function(d) {
-            d3.select("h2").text("");
+            d3.select("county").text("");
             // d3.select("h3").text("");
     };    
 
