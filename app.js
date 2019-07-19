@@ -1,6 +1,13 @@
-function search() {
-    alert("This doesn't work yet! ^^; ")
+function searchclick() {
+    // alert("Search doesn't work yet!")
+    var search = document.getElementById("searchCity");
+    search.value = "Search does not work yet!"
 }
+
+function searchkey(e) {
+    if (e.keyCode === 13) {  //checks whether the pressed key is "Enter"
+    alert("Search doesn't work yet!")
+}}
 
 var margin = 40;
 var width = 1500;
@@ -98,9 +105,11 @@ function ready (error, us, master) {
     var table  = d3.select("#table").append("table");
     var countyarray = Object.keys(countyjson)
 
-    // document.getElementById("searchCity").onsubmit = function() {
-    //     console.log("hello")
-    //     // alert(document.getElementById("searchCity").value);
+
+
+    // document.getElementById("searchButton").onclick = function() {
+    //     console.log("this does not work yet!")
+        // alert(document.getElementById("searchCity").value);
     // }
 
     // document.getElementbyId("searchCity").onsubmit = function() {searchFunction()};
