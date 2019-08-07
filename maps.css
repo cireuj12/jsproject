@@ -7,7 +7,7 @@ body{
 } */
 
 .search {
-  width: 100%;
+  width: 90%;
   position: relative;
   display: flex;
 }
@@ -26,6 +26,7 @@ body{
 .searchTerm:focus{
   color: #00B4CC;
 }
+
 
 .searchButton {
   width: 40px;
@@ -79,7 +80,7 @@ body {
     font-size: 1.1em;
     font-weight: 100;
     font-family: 'Varela Round', sans-serif; 
-    top: 50px;
+    top: 75px;
     width: 800px;
 }
 
