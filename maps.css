@@ -50,6 +50,13 @@ body{
   /* transform: translate(-50%, -50%); */
 }
 
+.hover {
+    fill-opacity: .25
+}
+
+.unhover {
+    fill-opacity: 100;
+}
 
 .counties {
     cursor: pointer;

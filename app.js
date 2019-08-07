@@ -93,19 +93,6 @@ function searchclick() {
         d3.select("#mortgage-rate").text(`Mortgage Rate:  ${master[searchtest][(city_keys[55])]}%`)
         };
 
-
-        //fill if county id matches
-        // svg.append("g").attr("class","counties")
-        // .selectAll("path")
-        // .data(topojson.feature(us,us.objects.counties).features) 
-        // .enter()
-        // .append("path")
-        // .attr("d", path)
-        // .style("fill", function(d) {
-        //     if (countyarray.includes(d.id)) {
-        //         return "#F4D03F"
-        //     }
-        // })
 }
 
 function searchkey() {
@@ -189,7 +176,7 @@ function ready (error, us, master) {
     .append("path")
     .attr("d", path)
     .style("fill", function(d) {
-        if (countyarray.includes(d.id)) {
+        if (countyarray.includes(d.id) && !(searchtest)) {
             return "#F4D03F"
         }
     })
@@ -218,12 +205,12 @@ function ready (error, us, master) {
             d3.select("#mortgage-rate").text(`Mortgage Rate:  ${master[d.id][(city_keys[55])]}%`)
             };
 
-            if (d3.select(this).classed("active")) return;
+            // if (d3.select(this).classed("active")) return;
             /* no need to change class when county is already selected */
       
-            if (!d3.select(this).classed("highlight")){
+            
               d3.select(this).attr("class", "hover");
-            }
+            
       
             // if(toolTipVisible){
             //   div.transition()
@@ -235,12 +222,12 @@ function ready (error, us, master) {
             // } 
     })
     // .on("mouseover", handleHover )
-    .on("mouseout"), function(d) {
-            if(countyarray.includes(d.id)) {
-                d3.select("#county").text("");
-            // d3.select("h3").text("");
-            }
-    };    
+ 
+
+    svg.selectAll("path")
+    .on("mouseout", function (d) {
+        d3.select(this).attr("class","unhover")
+    })
 
     function handleHover(d) {
         // if (d3.select(this).classed("active")) return;
