@@ -27,6 +27,11 @@ body{
   color: #7FB3D5;
 }
 
+#footer {
+    bottom: 250px;
+    position: absolute;
+    display: inline-flex;
+}
 
 .searchButton {
   width: 40px;
@@ -131,10 +136,7 @@ h3 {
 }
 
 #average-monthly-salary {
-    right: -250px;
-    position: absolute;
-    top: 500px;
-    width: 800px; 
+    margin-top: 25px;
     font-weight: 700;
     font-size: 1em;
     font-family: 'Varela Round', sans-serif;
