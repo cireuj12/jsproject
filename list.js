@@ -52,7 +52,7 @@ const citynames = Object.values(countylist);
 
 const list = document.getElementById('cityset');
 
-console.log(citynames)
+// console.log(citynames)
 citynames.sort().forEach(function(city){
     const option = document.createElement('option');
     option.value = city;

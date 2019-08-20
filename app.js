@@ -70,7 +70,7 @@ function searchclick() {
 
     // let city_keys = Object.keys(master["36061"])
     // d3.select("#meal").text(`Meal for Two:  ${master["36061"][(city_keys[1])]}`)
-    console.log(searchtest);
+    // console.log(searchtest);
 
 
     let search_variable = master[searchtest]
@@ -80,17 +80,24 @@ function searchclick() {
         // d3.select("#county").text(`County:  `)
         d3.select("#city").text(`City:  ${countyjson[searchtest]}`)
         d3.select("#meal").text(`Meal for Two:  ${master[searchtest][(city_keys[1])]}`)
-        d3.select("#domestic_beer").text(`Domestic Beer:  ${master[searchtest][(city_keys[4])]}`)
-        d3.select("#monthlycommute").text(`Monthly Commute:  ${master[searchtest][(city_keys[29])]}`)
-        d3.select("#gas").text(`Gallon of Gas:  ${master[searchtest][(city_keys[33])]}`)
-        d3.select("#milk").text(`Gallon of Milk:  ${master[searchtest][(city_keys[9])]}`)
-        d3.select("#eggs").text(`A Dozen Eggs:  ${master[searchtest][(city_keys[12])]}`)
-        d3.select("#movieticket").text(`Movie:  ${master[searchtest][(city_keys[41])]}`)
-        d3.select("#fitness-club").text(`Gym Membership:  ${master[searchtest][(city_keys[39])]}`)
-        d3.select("#monthly-utilities").text(`Monthly Utilities:  ${master[searchtest][(city_keys[36])]}`)
-        d3.select("#rent").text(`Rent for 1BR(City Center):  ${master[searchtest][(city_keys[48])]}`)
+        d3.select("#domestic_beer").text(`Domestic Beer (1 pint):  ${master[searchtest][(city_keys[4])]}`)
+        d3.select("#monthlycommute").text(`Monthly Commuting Pass:  ${master[searchtest][(city_keys[29])]}`)
+        d3.select("#gas").text(`Gas (1 gallon):  ${master[searchtest][(city_keys[33])]}`)
+        d3.select("#milk").text(`Milk (1 gallon):  ${master[searchtest][(city_keys[9])]}`)
+        d3.select("#eggs").text(`Eggs (dozen):  ${master[searchtest][(city_keys[12])]}`)
+        d3.select("#movieticket").text(`Movie (1 ticket):  ${master[searchtest][(city_keys[41])]}`)
+        d3.select("#fitness-club").text(`Gym Membership (monthly):  ${master[searchtest][(city_keys[39])]}`)
+        d3.select("#monthly-utilities").text(`Basic Monthly Utilities (Eletricity, Water, Heating and Cooling):  ${master[searchtest][(city_keys[36])]}`)
+        d3.select("#rent").text(`Rent for 1BR (City Center):  ${master[searchtest][(city_keys[48])]}`)
         d3.select("#rent2").text(`Rent for 1BR:  ${master[searchtest][(city_keys[49])]}`)
         d3.select("#mortgage-rate").text(`Mortgage Rate:  ${master[searchtest][(city_keys[55])]}%`)
+        d3.select("#imported_beer").text(`Imported Beer (1 pint): ${master[searchtest][(city_keys[5])]}`)
+        d3.select("#water").text(`Bottled Water (12 oz): ${master[searchtest][(city_keys[8])]}`)
+        d3.select("#chicken").text(`Chicken Breasts (1 lb): ${master[searchtest][(city_keys[15])]}`)
+        d3.select("#apple").text(`Apples (1 lb): ${master[searchtest][(city_keys[17])]}`)
+        d3.select("#banana").text(`Banana (1 lb): ${master[searchtest][(city_keys[18])]}`)
+        d3.select("#internet").text(`Internet (monthly): ${master[searchtest][city_keys[38]]}`)
+        d3.select("#average-monthly-salary").text(`Average Salary (monthly): ${master[searchtest][city_keys[54]]}`)
         };
 
 }
@@ -192,17 +199,24 @@ function ready (error, us, master) {
             // d3.select("#county").text(`County:  ${d.properties.name}`)
             d3.select("#city").text(`City:  ${countyjson[d.id]}`)
             d3.select("#meal").text(`Meal for Two:  ${master[d.id][(city_keys[1])]}`)
-            d3.select("#domestic_beer").text(`Domestic Beer:  ${master[d.id][(city_keys[4])]}`)
-            d3.select("#monthlycommute").text(`Monthly Commute:  ${master[d.id][(city_keys[29])]}`)
-            d3.select("#gas").text(`Gallon of Gas:  ${master[d.id][(city_keys[33])]}`)
-            d3.select("#milk").text(`Gallon of Milk:  ${master[d.id][(city_keys[9])]}`)
-            d3.select("#eggs").text(`A Dozen Eggs:  ${master[d.id][(city_keys[12])]}`)
-            d3.select("#movieticket").text(`Movie:  ${master[d.id][(city_keys[41])]}`)
-            d3.select("#fitness-club").text(`Gym Membership:  ${master[d.id][(city_keys[39])]}`)
-            d3.select("#monthly-utilities").text(`Monthly Utilities:  ${master[d.id][(city_keys[36])]}`)
-            d3.select("#rent").text(`Rent for 1BR(City Center):  ${master[d.id][(city_keys[48])]}`)
+            d3.select("#domestic_beer").text(`Domestic Beer (1 pint):  ${master[d.id][(city_keys[4])]}`)
+            d3.select("#monthlycommute").text(`Monthly Commuting Pass:  ${master[d.id][(city_keys[29])]}`)
+            d3.select("#gas").text(`Gas (1 gallon):  ${master[d.id][(city_keys[33])]}`)
+            d3.select("#milk").text(`Milk (1 gallon):  ${master[d.id][(city_keys[9])]}`)
+            d3.select("#eggs").text(`Eggs (dozen):  ${master[d.id][(city_keys[12])]}`)
+            d3.select("#movieticket").text(`Movie (1 ticket):  ${master[d.id][(city_keys[41])]}`)
+            d3.select("#fitness-club").text(`Gym Membership (monthly):  ${master[d.id][(city_keys[39])]}`)
+            d3.select("#monthly-utilities").text(`Basic Monthly Utilities (Eletricity, Water, Heating and Cooling):  ${master[d.id][(city_keys[36])]}`)
+            d3.select("#rent").text(`Rent for 1BR (City Center):  ${master[d.id][(city_keys[48])]}`)
             d3.select("#rent2").text(`Rent for 1BR:  ${master[d.id][(city_keys[49])]}`)
             d3.select("#mortgage-rate").text(`Mortgage Rate:  ${master[d.id][(city_keys[55])]}%`)
+            d3.select("#imported_beer").text(`Imported Beer (1 pint): ${master[d.id][(city_keys[5])]}`)
+            d3.select("#water").text(`Bottled Water (12 oz): ${master[d.id][(city_keys[8])]}`)
+            d3.select("#chicken").text(`Chicken Breasts (1 lb): ${master[d.id][(city_keys[15])]}`)
+            d3.select("#apple").text(`Apples (1 lb): ${master[d.id][(city_keys[17])]}`)
+            d3.select("#banana").text(`Banana (1 lb): ${master[d.id][(city_keys[18])]}`)
+            d3.select("#internet").text(`Internet (monthly): ${master[d.id][city_keys[38]]}`)
+            d3.select("#average-monthly-salary").text(`Average Salary (monthly): ${master[d.id][city_keys[54]]}`)
             };
 
             // if (d3.select(this).classed("active")) return;
