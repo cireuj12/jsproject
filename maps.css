@@ -40,7 +40,7 @@ body {
 #blurb {
     border: 3px solid #7FB3D5;
     padding: 5px;
-    margin-left: 5px;
+    margin-left: 10px;
 }
 
 .searchButton {
@@ -123,7 +123,7 @@ body {
 }
 
 #icons {
-    margin-left: 242px;
+    margin-left: 245px;
     display: inline-flex;
 }
 
