@@ -6,6 +6,10 @@ body{
   font-family: 'Open Sans', sans-serif;
 } */
 
+body {
+    background-color: #f7f8fa;
+}
+
 .search {
   width: 90%;
   position: relative;
@@ -33,6 +37,12 @@ body{
     display: inline-flex;
 }
 
+#blurb {
+    border: 3px solid #7FB3D5;
+    padding: 5px;
+    margin-left: 5px;
+}
+
 .searchButton {
   width: 40px;
   height: 36px;
@@ -44,6 +54,22 @@ body{
   cursor: pointer;
   font-size: 20px;
 }
+
+.fa-linkedin:before, .fa-github:before, .fa-angellist:before, .fa-laptop-code:before {
+    color: #7FB3D5;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+}
+
+.fa-linkedin, .fa-github, .fa-angellist, .fa-laptop-code {
+    text-decoration: none;
+}
+
+a.hover {
+    text-decoration: none;
+}
+
 
 /*Resize the wrap to see the search bar change!*/
 .wrap{
@@ -94,6 +120,11 @@ body {
     font-family: 'Varela Round', sans-serif; 
     top: 75px;
     width: 800px;
+}
+
+#icons {
+    margin-left: 242px;
+    display: inline-flex;
 }
 
 /* #header {
