@@ -98,7 +98,8 @@ function searchclick() {
         d3.select("#banana").text(`Banana (1 lb): ${master[searchtest][(city_keys[18])]}`)
         d3.select("#internet").text(`Internet (monthly): ${master[searchtest][city_keys[38]]}`)
         d3.select("#average-monthly-salary").text(`Average Salary (monthly): ${master[searchtest][city_keys[54]]}`)
-        };
+        d3.select("#pre-school").text(`Tuition for Pre-School (monthly): ${master[searchtest][city_keys[42]]}`)    
+    };
 
 }
 
@@ -217,6 +218,7 @@ function ready (error, us, master) {
             d3.select("#banana").text(`Banana (1 lb): ${master[d.id][(city_keys[18])]}`)
             d3.select("#internet").text(`Internet (monthly): ${master[d.id][city_keys[38]]}`)
             d3.select("#average-monthly-salary").text(`Average Salary (monthly): ${master[d.id][city_keys[54]]}`)
+            d3.select("#pre-school").text(`Tuition for Pre-School (monthly): ${master[d.id][city_keys[42]]}`)
             };
 
             // if (d3.select(this).classed("active")) return;
